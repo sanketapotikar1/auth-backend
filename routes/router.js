@@ -19,7 +19,7 @@ const transporter = nodemailer.createTransport({
       user:"sanketapotikar1@gmail.com",
       pass:"rfxsqakiarkpiqcm"
   }
-}) 
+})
 
 // for user registration
 
@@ -104,6 +104,7 @@ router.post("/login", async (req, res) => {
 });
 
 // user valid
+
 router.get("/validuser", authenticate, async (req, res) => {
   try {
     const ValidUserOne = await userdb.findOne({ _id: req.userId });
@@ -134,6 +135,7 @@ router.get("/logout", authenticate, async (req, res) => {
 
 
 // send email Link For reset Password
+
 router.post("/sendpasswordlink",async(req,res)=>{
   console.log(req.body)
 
@@ -183,6 +185,7 @@ router.post("/sendpasswordlink",async(req,res)=>{
 
 
 // verify user for forgot password time
+
 router.get("/forgotpassword/:id/:token",async(req,res)=>{
   const {id,token} = req.params;
 

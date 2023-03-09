@@ -4,7 +4,7 @@ require("./db/conn");
 const router = require("./routes/router");
 const cors = require("cors");
 const cookiParser = require("cookie-parser")
-const port = 8000;
+const port = process.env.PORT || 8000 ;
 
 // middleware function
 app.use(express.json());
