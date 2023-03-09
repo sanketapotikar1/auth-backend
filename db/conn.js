@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+mongoose.set("strictQuery", false);
 
 const DB = "mongodb+srv://sanket:admin123@cluster0.iavuebx.mongodb.net/Authusers?retryWrites=true&w=majority"
 
